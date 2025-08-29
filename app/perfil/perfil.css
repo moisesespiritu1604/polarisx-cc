@@ -1,0 +1,123 @@
+/* =================================
+   PERFIL PAGE STYLES
+   ================================= */
+
+/* Sección hero específica para perfil */
+#hero-section-perfil {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)),
+    url("/perfil/fondo-perfil.webp"); /* EDITAR: Imagen de fondo */
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh; /* EDITAR: Altura mínima de la sección */
+  display: flex;
+  align-items: center;
+  padding: 20px 0; /* EDITAR: Espaciado vertical */
+}
+
+/* ===========================================
+   SECCIÓN PRINCIPAL - PERFIL DE LA EMPRESA
+   =========================================== */
+#company-profile-section {
+  padding: 1em 0;
+}
+
+.profile-content-container {
+  max-width: 1176px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: 3fr 1fr;
+  position: relative;
+}
+
+/* Contenido principal de la descripción de la empresa */
+.company-description {
+  display: block;
+}
+
+.company-description h1 {
+  font-size: 34px;
+  line-height: 1.1em;
+  color: #414042;
+  margin-block-start: 1.33em;
+}
+
+.company-description .company-intro {
+  margin: 1em 0;
+  font-size: 22px;
+  line-height: 1.33em;
+  color: #58595b;
+  display: block;
+}
+
+.company-description h3 {
+  margin-bottom: 0.625em;
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 18px;
+  color: #414042;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.company-description p {
+  margin: 1em 0;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #58595b;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Sidebar con testimonios */
+.profile-testimonial-sidebar {
+  position: relative;
+  max-width: 270px;
+  min-height: 1px;
+}
+
+.profile-testimonial-sidebar blockquote {
+  margin: 80px 0;
+  padding: 1.25em 0.875em 0.5em;
+  display: block;
+  quotes: none;
+  font-size: 23px;
+  line-height: 1.27em;
+  color: #41b3c1;
+  background-color: #ecf7f9;
+  border-top: 3px solid #41b3c1;
+  text-align: left;
+}
+
+.fa-quote-left {
+  padding-right: 0.25em;
+  font-size: 40px;
+  margin-bottom: 10px;
+  display: block;
+  line-height: 1;
+  text-transform: none;
+}
+
+.fa-quote-right {
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.cliente {
+  margin-top: 1em;
+  display: block;
+  font-size: 0.63em;
+  font-weight: 700;
+  color: #41b3c1;
+}
+

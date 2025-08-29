@@ -1,0 +1,745 @@
+/* ========================================
+   1. SECCIÓN PRINCIPAL (HERO SECTION)
+   ======================================== */
+
+/* Contenedor principal del hero */
+#hero-section-inicio {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    url("/inicio/fondo-inicio.webp");
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Contenedor del contenido con ancho máximo */
+.hero-container {
+  width: 100%;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Caja de contenido principal */
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  color: var(--blanco);
+  text-align: left;
+  margin: 5% 0; /* Margen superior sin centrado horizontal */
+}
+
+/* Título principal */
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  color: #fff;
+  padding-bottom: 10px;
+  border-bottom: var(--sexto) solid 4px;
+  font-weight: bold;
+}
+
+/* Descripción del hero */
+.hero-description {
+  color: var(--blanco);
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Pantallas hasta 1176px */
+@media only screen and (max-width: 1176px) {
+  .hero-container {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+/* Pantallas hasta 1050px - Centrado del contenido */
+@media only screen and (max-width: 1050px) {
+  .hero-content {
+    margin: 5% auto; /* Centrado cuando la pantalla es menor a 1050px */
+  }
+}
+
+/* Tablets - 768px */
+@media only screen and (max-width: 768px) {
+  #hero-section {
+    min-height: 60vh;
+  }
+  
+  .hero-content {
+    padding: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+/* Móviles - 480px */
+@media only screen and (max-width: 480px) {
+  #hero-section {
+    min-height: 70vh;
+  }
+  
+  .hero-container {
+    padding: 0 12px;
+  }
+  
+  .hero-content {
+    padding: 12px;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   2. SECCIÓN DE BLOG - CONFIGURACIÓN PRINCIPAL
+   ======================================== */
+
+/* Contenedor principal del blog */
+#blog-section {
+    padding: 40px 0;
+    margin: auto;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor con ancho máximo y centrado */
+.blog-container {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px;
+    padding-right: 8px;   
+    margin-top: 0px;
+}
+
+/* Espaciado inferior del contenido del blog */
+.blog-content {
+    margin-bottom: 70px;
+}
+
+/* ========================================
+   HEADER DE LA SECCIÓN BLOG - TÍTULO Y NAVEGACIÓN
+   ======================================== */
+
+/* Contenedor del título principal del blog */
+.blog-section-header {
+    width: 100%;
+    position: relative;
+    margin-top: 2em;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: var(--sexto) solid 4px;
+}
+
+/* Contenido del header del blog con título y enlace */
+.blog-header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* Título principal de la sección blog */
+.blog-section-title {
+    color: #414042;
+    font-size: 48px;
+    margin: 0;
+    display: inline-block;
+}
+
+/* Enlace "Ir a Blog" */
+.blog-header-content a {
+    position: relative;
+    display: inline-block;
+    background: 0 0;
+    padding-right: 16px;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #5d2b8c;
+    font-weight: 700;
+}
+
+.blog-header-content a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   ICONOS Y ELEMENTOS GRÁFICOS
+   ======================================== */
+
+/* Icono de flecha (rotado 90 grados) */
+.fa-caret-up {
+    transform: rotate(90deg);
+    color: #fdb924;
+}
+
+/* ========================================
+   GRID PRINCIPAL PARA DESKTOP - LAYOUT EN DOS COLUMNAS
+   ======================================== */
+
+/* Grid principal para desktop (post destacado + sidebar) */
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    width: 100%; 
+    align-items: start;
+}
+
+/* Post destacado principal */
+.featured-post {
+    width: 100%;
+}
+
+/* Posts del sidebar */
+.sidebar-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre posts del sidebar */
+}
+
+/* ========================================
+   ESTILOS DE POSTS - VERSIÓN OVERLAY (DESKTOP)
+   ======================================== */
+
+/* Contenedor individual del post */
+.blog-post {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Post destacado - altura calculada para igualar sidebar */
+.featured-post .blog-post {
+    width: 100%;
+    height: 580px; /* Altura calculada: (180px * 3) + (20px * 2) = 580px */
+}
+
+/* Posts del sidebar - altura fija */
+.sidebar-posts .blog-post {
+    width: 100%;
+    height: 180px;
+}
+
+/* Imágenes de los posts - se adaptan al contenedor */
+.blog-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporción sin deformar */
+    transition: transform .3s ease, filter .3s ease;
+    display: block;
+}
+
+/* Efecto hover en imágenes */
+.blog-post img:hover {
+    transform: scale(1.05); /* Efecto más sutil */
+}
+
+/* Información superpuesta en los posts */
+.post-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px 15px 15px;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+.post-info span {
+    color: #41b3c1;
+}
+
+/* Tipografía en post destacado */
+.featured-post .post-info p {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    opacity: 0.9;
+}
+
+.featured-post .post-info h4 {
+    font-size: 16px; 
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Tipografía en sidebar posts */
+.sidebar-posts .post-info p {
+    font-size: 11px;
+    margin: 0 0 3px 0;
+    opacity: 0.9;
+}
+
+.sidebar-posts .post-info h4 {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* ========================================
+   GRID DE TARJETAS - VERSIÓN MÓVIL/TABLET
+   ======================================== */
+
+/* Contenedor del grid de tarjetas */
+.cards-grid {
+    margin-top: 20px;
+}
+
+/* Grid de 3 columnas para las tarjetas con espaciado fijo */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio fijo entre tarjetas */
+}
+
+/* Tarjeta individual del blog */
+.blog-card {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    margin: 0; /* Eliminar margen automático */
+    height: 380px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card a {
+    text-decoration: none;
+}
+
+/* Contenedor de imagen en tarjetas - altura fija */
+.blog-card > div:first-child {
+    height: 200px; /* Altura fija para el área de imagen */
+    overflow: hidden;
+}
+
+/* Imágenes en las tarjetas */
+.blog-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Se adapta sin deformarse */
+    transition: transform .3s ease, filter .3s ease;
+    display: block;
+}
+
+.blog-card img:hover {
+    transform: scale(1.05); /* Efecto hover más sutil */
+}
+
+/* ========================================
+   INFORMACIÓN DE TARJETAS - CONTENIDO INTERNO
+   ======================================== */
+
+/* Contenedor de información en tarjetas */
+.card-info {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between; /* Distribuye el contenido */
+}
+
+/* Títulos en tarjetas */
+.card-info h4 {
+    color: #414042;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.card-info span {
+    color: #41b3c1;
+}
+
+/* Fecha de publicación */
+.card-date {
+    background-color: #ececec; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    font-size: 14px;
+    color: #666; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
+}
+
+/* ========================================
+   ENLACES "LEER MÁS" - ACCIONES
+   ======================================== */
+
+/* Enlace "Leer más" */
+.read-more a {
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+}
+
+.read-more a p {
+    color: #5d2b8c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.read-more i {
+    color: var(--sexto);
+    transform: rotate(90deg);
+    margin-left: 5px;
+}
+
+/* ========================================
+   CLASES DE VISIBILIDAD - RESPONSIVE
+   ======================================== */
+
+/* Oculto por defecto en móvil/tablet */
+.mobile-tablet-only {
+    display: none;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ======================================== */
+
+/* TABLET - Máximo 1100px */
+@media only screen and (max-width: 1100px) {
+    
+    /* Mostrar versión móvil/tablet */
+    .mobile-tablet-only {
+        display: block;
+    }
+    
+    /* Cambiar grid de tarjetas a 2 columnas */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* Reducir espacio en tablet */
+    }
+    
+    /* Ajustar altura de tarjetas en tablet */
+    .blog-card {
+        height: 350px;
+    }
+    
+    .blog-card > div:first-child {
+        height: 180px;
+    }
+    
+    /* Ocultar versión desktop */
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* MÓVIL - Máximo 768px */
+@media only screen and (max-width: 768px) {
+    
+    /* Grid principal a una sola columna */
+    .main-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustar dimensiones para móvil */
+    .featured-post .blog-post {
+        height: 250px; /* Altura reducida en móvil */
+    }
+    
+    .sidebar-posts .blog-post {
+        height: 150px; /* Altura reducida en móvil */
+    }
+    
+    /* Ajustes tipográficos para móvil */
+    .sidebar-posts .post-info h4 {
+        font-size: 12px;   
+    }
+    
+    /* Eliminar margen en post destacado */
+    .featured-post {
+        margin-right: 0;
+    }
+    
+    /* Espaciado en sidebar posts */
+    .sidebar-posts {
+        margin: 15px 0;
+    }
+    
+    /* Header flexible en móvil */
+    .blog-header-content {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    
+    .blog-section-header h2 {
+        margin-bottom: 10px;
+    }
+    
+    /* Grid de tarjetas a una sola columna */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    /* Ocultar versión desktop */
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* ====================================
+   3. CAROUSEL DE BLOG - CONTENEDOR PRINCIPAL
+   ==================================== */
+/* Contenedor principal del carousel */
+.blog-carousel-container {
+    max-width: 1920px;
+    max-height: 670px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: -70px; /* Ajustar según diseño del header */
+}
+
+/* ====================================
+   WRAPPER Y SLIDES DEL CAROUSEL
+   ==================================== */
+/* Contenedor que envuelve todos los slides */
+.blog-carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease; /* Suavidad de transición entre slides */
+}
+
+/* Cada slide individual del carousel */
+.blog-carousel-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Imágenes de los slides */
+.blog-carousel-slide img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* Oscurecer imagen para mejor legibilidad del texto */
+}
+
+/* ====================================
+   BOTONES DE NAVEGACIÓN
+   ==================================== */
+/* Estilos base para botones anterior/siguiente */
+.blog-carousel-btn {
+    position: absolute;
+    bottom: 6%; /* Posición desde abajo */
+    width: 5%; /* Ancho relativo */
+    height: auto;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 0px;
+    cursor: pointer;
+    transform: scale(1.3); /* Tamaño inicial */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+    background: none;
+    border: none;
+}
+
+/* Efecto hover para botones de navegación */
+.blog-carousel-btn:hover {
+    transform: scale(1.6); /* Aumentar tamaño en hover */
+}
+
+/* Posición específica del botón anterior */
+.blog-carousel-btn-prev {
+    left: 43%;
+}
+
+/* Posición específica del botón siguiente */
+.blog-carousel-btn-next {
+    right: 43%;
+}
+
+/* ====================================
+   CONTENIDO DE LOS SLIDES
+   ==================================== */
+/* Contenedor del contenido superpuesto en cada slide */
+.blog-slide-content {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo semi-transparente */
+    max-width: 1176px;
+    width: 75%;
+    position: relative;
+    bottom: 90%; /* Posicionamiento sobre la imagen */
+    left: 11%;
+    padding: 48px;
+    text-align: left;
+    color: var(--blanco); /* Variable de color blanco */
+}
+
+/* Título de cada entrada del blog */
+.blog-slide-info h2 {
+    width: 100%;
+    font-size: 48px;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: var(--sexto) solid 4px; /* Variable de color para borde */
+}
+
+/* Contenedor de la información del slide */
+.blog-slide-info {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 2em;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: #a6a9ac solid 1px; /* Línea separadora */
+}
+
+/* Botón "Leer más" */
+.blog-slide-info a {
+    text-decoration: none;
+    color: #414042;
+    background-color: var(--sexto); /* Variable de color de fondo */
+    border-color: var(--sexto);
+    padding: 13px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+/* ====================================
+   PAGINACIÓN (PUNTOS INDICADORES)
+   ==================================== */
+/* Contenedor de la paginación */
+.blog-carousel-pagination {
+    position: absolute;
+    bottom: 5.3%;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Puntos individuales de paginación */
+.blog-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 7px 5px;
+    cursor: pointer;
+    transition: opacity 0.3s; /* Transición suave para cambios */
+    border: none;
+    opacity: 0.7; /* Opacidad por defecto */
+}
+
+/* Punto activo de la paginación */
+.blog-pagination-bullet-active {
+    background-color: #f7c400; /* Color destacado para slide activo */
+    opacity: 1;
+}
+
+/* ====================================
+   RESPONSIVE - TABLETS Y MÓVILES
+   ==================================== */
+/* Ajustes para tablets y móviles */
+@media only screen and (max-width: 768px) {
+    /* Reducir tamaño del título en móviles */
+    .blog-slide-info h2 {
+        font-size: 24px;
+    }
+
+    /* Reducir altura del carousel en móviles */
+    .blog-carousel-container {
+        max-height: 450px; /* Altura reducida para móviles */
+        height: 450px;
+    }
+    
+    /* Reposicionar botones de navegación más cerca del centro */
+    .blog-carousel-btn-prev {
+        left: 25%; /* Más cerca del centro */
+    }
+    
+    .blog-carousel-btn-next {
+        right: 25%; /* Más cerca del centro */
+    }
+    
+    /* Ajustar paginación para estar centrada entre los botones */
+    .blog-carousel-pagination {
+        bottom: 8%; /* Subir un poco más para mejor visualización */
+    }
+    
+    /* Ajustar contenido del slide para móviles */
+    .blog-slide-content {
+        width: 90%;
+        left: 5%;
+        padding: 20px; /* Reducir padding en móviles */
+        bottom: 85%; /* Ajustar posición */
+    }
+    .blog-pagination-bullet {
+        margin: -7px 5px;
+    }
+}
+
+/* ====================================
+   RESPONSIVE - PANTALLAS MEDIANAS
+   ==================================== */
+/* Ajustes para pantallas hasta 1176px */
+@media only screen and (max-width: 1176px) {
+    /* Ajustar contenido para pantallas más pequeñas */
+    .blog-slide-content {
+        left: 10px;
+        width: 96%; /* Usar más ancho disponible */
+    }
+    
+    /* Ajustar contenedor de presentación general */
+    .contenedor-presentacion {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}

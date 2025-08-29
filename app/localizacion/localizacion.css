@@ -1,0 +1,212 @@
+/* ======================
+           SECCIÓN DE ENCABEZADO
+           ====================== */
+        .location-header-section {
+          background-color: #e6e3e3;
+        }
+
+        .location-header-content {
+          max-width: 1176px;
+          padding: 8px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        .location-header-content h1 {
+          font-size: 30px;
+          color: #414042;
+        }
+
+        .location-header-content p {
+          font-size: 18px;
+          line-height: 1.33em;
+          color: #58595b;
+          display: block;
+        }
+
+        /* ======================
+           CONTENEDOR PRINCIPAL
+           ====================== */
+        .main-location-container {
+          max-width: 1176px;
+          padding: 8px;
+          margin: 0 auto;
+        }
+
+        /* ======================
+           LAYOUT PRINCIPAL
+           ====================== */
+        .layout-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 20px;
+          min-height: 600px;
+        }
+
+        /* ======================
+           CONTENEDOR DEL MAPA INTERACTIVO
+           ====================== */
+        .interactive-map-container {
+          max-width: 600px;
+          width: 100%;
+          margin: 80px 0 0 0;
+          position: relative;
+          height: 600px;
+        }
+
+        /* Mapa base de Perú - siempre visible */
+        .base-map {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .base-map img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        /* ======================
+           REGIONES OVERLAY
+           ====================== */
+        .region-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          cursor: pointer;
+          pointer-events: none;
+        }
+
+        .region-overlay img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        /* Estado activo de las regiones */
+        .region-active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        /* Hover effect para regiones en el mapa */
+        .region-overlay:hover {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        /* ======================
+           PANEL LATERAL DE EXPLORACIÓN
+           ====================== */
+        .location-explorer-panel {
+          width: 280px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 16px;
+          border-radius: 8px;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+          height: fit-content;
+          margin-top: 0;
+          align-self: center;
+        }
+
+        .location-explorer-panel h3 {
+          margin-bottom: 16px;
+          font-size: 16px;
+          border-bottom: 2px solid #f7b600;
+          padding-bottom: 6px;
+        }
+
+        /* ======================
+           BOTONES DE REGIONES
+           ====================== */
+        .region-buttons-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .region-button {
+          background-color: #f7f7f7;
+          border: 1px solid #ccc;
+          padding: 10px;
+          font-size: 14px;
+          cursor: pointer;
+          border-radius: 20px;
+          transition: all 0.3s ease;
+        }
+
+        .region-button:hover {
+          background-color: #ffe082;
+          border-color: #f7b600;
+        }
+
+        .region-button-active {
+          background-color: #f7b600;
+          border-color: #f7b600;
+          color: white;
+        }
+
+        /* ======================
+           RESPONSIVE DESIGN
+           ====================== */
+        @media (max-width: 768px) {
+          .layout-wrapper {
+            flex-direction: column;
+            align-items: center;
+            min-height: auto;
+          }
+
+          .interactive-map-container {
+            margin: 20px 0;
+            max-width: 400px;
+            height: 400px;
+          }
+
+          .location-explorer-panel {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+          }
+
+          /* Margen adicional en la parte inferior para móviles */
+          .main-location-container {
+            padding-bottom: 40px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .location-header-content {
+            padding: 16px;
+          }
+
+          .main-location-container {
+            padding: 16px;
+            padding-bottom: 60px;
+          }
+
+          .interactive-map-container {
+            max-width: 100%;
+            height: 350px;
+            margin: 15px 0;
+          }
+
+          .location-explorer-panel {
+            margin-bottom: 50px;
+          }
+
+          .region-button {
+            padding: 12px;
+            font-size: 15px;
+          }
+        }

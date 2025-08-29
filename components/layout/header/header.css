@@ -1,0 +1,573 @@
+/* ========================================
+   HEADER PRINCIPAL - CONFIGURACIÓN GENERAL
+   ======================================== */
+
+/* Contenedor principal del header */
+#header-section {
+    position: relative;
+    height: auto;
+    border-bottom: 5px solid var(--sexto);
+}
+
+/* Header principal */
+.main-header {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* Contenido del header */
+.header-content {
+    margin: auto;
+    display: flex; 
+}
+
+/* ========================================
+   NAVEGACIÓN PRINCIPAL Y LOGO
+   ======================================== */
+
+/* Navegación principal (lado izquierdo) */
+.primary-navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    justify-content: space-between;
+}
+.fa-caret-up {
+
+    color: #fdb924;
+}
+/* Contenedor del logo */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.brand-logo img {
+    width: 152.5px !important;
+    height: 40px !important;
+    margin-right: 5px;
+    max-width: none !important;
+}
+
+/* Enlaces generales */
+.header-content a {
+    text-decoration: none;    
+}
+
+/* ========================================
+   MENÚ PRINCIPAL DESKTOP
+   ======================================== */
+
+/* Lista del menú principal */
+.main-menu {
+    display: flex;
+}
+
+/* Items del menú principal */
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Espaciado especial para Formación */
+.menu-item-spacing {
+    margin-left: -23px;
+}
+
+/* Enlaces del menú principal */
+.menu-item a {
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+/* Iconos de dropdown */
+.menu-item i {
+    transform: rotate(180deg);
+    margin-left: -15px;
+    margin-top: -5px;
+}
+
+/* Hover de items del menú */
+.menu-item:hover {
+    color: var(--sexto);
+    cursor: pointer;
+}
+
+.menu-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ========================================
+   SUBMENÚS - CONFIGURACIÓN GENERAL
+   ======================================== */
+
+/* Contenedor de submenús */
+.submenu-container {
+    display: none;
+    position: absolute;
+    height: auto;
+    top: auto;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    z-index: 11;
+    background-color: #f6f6f6;
+    padding: 20px;
+}
+
+/* Submenú activo */
+.submenu-container.active {
+    display: block;
+}
+
+/* Contenido interno del submenú */
+.submenu-content {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 35px;
+}
+
+/* Sección introductoria del submenú */
+.submenu-intro {
+    /* Estilos para la introducción de cada submenú */
+}
+
+/* Descripción del submenú */
+.submenu-description {
+    margin: 0 0 0.75rem;
+    font-size: 1.8rem;
+    color: #000;
+    text-align: justify;
+}
+
+/* Enlaces principales del submenú */
+.submenu-intro a {
+    color: #fff;
+    background-color: #5d2b8c;
+    padding: 0.8rem 1.25rem;
+    display: inline-block;
+    font-size: .835em;
+    font-weight: 700;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.submenu-intro a:hover {
+    background-color: #38115a;
+}
+
+/* ========================================
+   SUBMENÚ - PERFIL
+   ======================================== */
+
+/* Sección de perfil */
+.submenu-section {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* ========================================
+   SUBMENÚ - LOCALIZACIONES (REGIONES)
+   ======================================== */
+
+/* Contenedor de regiones */
+.regions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 50px;
+}
+
+/* Item individual de región */
+.region-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5d2b8c;
+}
+
+.region-item a img {
+    width: 100px;
+    height: 130px;
+    padding-bottom: 10px;
+    color: #5d2b8c;
+    opacity: 0.5;
+}
+
+.region-item a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Divisores verticales */
+.vertical-divider {
+    border-left: 1px solid black;
+    height: 100px;
+}
+
+/* Hover de enlaces de región */
+.region-link:hover img {
+    filter: brightness(24%) saturate(34%) invert(10%) sepia(90%) saturate(1000%) hue-rotate(223deg) brightness(100%) contrast(80%);
+}
+
+/* ========================================
+   SUBMENÚ - SECTORES
+   ======================================== */
+
+/* Grid de sectores */
+.sectors-grid {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================================
+   SUBMENÚ - SERVICIOS
+   ======================================== */
+
+/* Grid de servicios */
+.services-grid {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================================
+   SUBMENÚ - FORMACIÓN
+   ======================================== */
+
+/* Grid de formación */
+.training-grid {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================================
+   COLUMNAS Y LISTAS DE SUBMENÚS
+   ======================================== */
+
+/* Columna de submenú */
+.submenu-column {
+    width: 25%;
+}
+
+.submenu-column a {
+    font-size: .875em;
+    font-weight: 700;
+    color: #5d2b8c;
+}
+
+/* Lista dentro de columna */
+.submenu-list {
+    /* Estilos para listas de submenús */
+}
+
+.submenu-list a {
+    color: black !important;
+    padding: 10px;
+}
+
+/* Iconos de flecha en listas */
+.menu-arrow {
+    top: 50%;
+    color: var(--sexto);
+    font-size: 12px;
+    transform: rotate(270deg);
+    margin-right: -8px;
+}
+
+.submenu-list a .menu-arrow {
+    margin-left: 10px;
+}
+
+/* Items de lista */
+.submenu-list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submenu-list li a:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Hover de items de lista */
+.submenu-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.submenu-list li a:hover {
+    color: #5d2b8c !important;
+}
+
+.submenu-list li:hover .menu-arrow {
+    color: #5d2b8c;
+}
+
+/* Estilos específicos para sectores */
+.sectors-grid .submenu-column .submenu-list a {
+    font-size: 14px;
+    padding-left: 0;
+}
+
+/* ========================================
+   NAVEGACIÓN SECUNDARIA (LADO DERECHO)
+   ======================================== */
+
+/* Navegación secundaria */
+.secondary-navigation {
+    width: 100%;
+    cursor: pointer;
+    float: right !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-content: center;
+    padding-bottom: 10px;
+}
+
+.secondary-navigation div {
+    padding: 5px;
+}
+
+/* ========================================
+   SELECTOR DE IDIOMA
+   ======================================== */
+
+/* Panel de idiomas */
+.language-selector {
+    font-weight: bold;
+}
+
+.language-selector i {
+    transform: rotate(180deg);
+}
+
+.language-selector div:hover {
+    color: var(--sexto);
+}
+
+/* Dropdown de idiomas */
+#language-dropdown {
+    cursor: pointer;
+    display: none;
+    margin-top: 10px;
+    padding: 1rem;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #d1d3d4;
+    z-index: 100;
+}
+
+#language-dropdown li a {
+    display: block;
+    font-weight: 700;
+    font-size: .8125em;
+    color: #414042;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+    text-align: left;
+}
+
+#language-dropdown li a:hover {
+    color: #008fc9;
+}
+
+#language-dropdown li hr {
+    border-top: 1px solid #ccc; 
+    margin-top: 5px; 
+    margin-bottom: 5px; 
+}
+
+/* ========================================
+   BUSCADOR
+   ======================================== */
+
+/* Icono de búsqueda */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translateY(-50%);
+}
+
+.search-icon i {
+    font-size: 2rem;
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    position: relative;
+    font-size: 15px;
+}
+
+/* Input de búsqueda */
+.search-container input[type="text"] {
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 45px;
+}
+
+.search-container span:hover {
+    color: var(--sexto);
+}
+
+/* ========================================
+   NAVEGACIÓN DE UTILIDADES
+   ======================================== */
+
+/* Navegación de utilidades */
+.utility-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.utility-nav ul li:hover,
+.utility-nav ul li a:hover {
+    color: var(--sexto);
+}
+
+.utility-nav ul li a {
+    color: #000;
+}
+
+/* ========================================
+   MENÚ MÓVIL
+   ======================================== */
+
+/* Botón toggle del menú móvil */
+#mobile-menu-toggle {
+    color: var(--sexto);
+    display: none;
+}
+
+.fa-bars {
+    font-size: 20px;
+}
+
+/* Menú móvil */
+.mobile-menu {
+    width: 100%;
+    display: block;
+    background-color: var(--blanco);
+    text-align: center;
+    align-items: flex-end;
+    position: fixed;
+    color: #000;
+    top: 5.2rem;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.mobile-menu li {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.mobile-menu li a:hover {
+    font-size: 25px;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(----sidebar-foreground);
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE
+   ======================================== */
+
+/* Pantallas menores a 500px */
+@media screen and (max-width: 500px) {
+    .mobile-menu ul {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0;
+    }
+}
+
+/* Pantallas menores a 1090px - Ocultar navegación secundaria */
+@media screen and (max-width: 1090px) {
+    .secondary-navigation {
+        display: none;
+    }
+}
+
+/* Pantallas menores a 960px - Activar modo móvil */
+@media screen and (max-width: 960px) {
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 2px;
+    }
+    
+    #desktop-navigation {
+        display: none;
+    }
+    
+    .secondary-navigation {
+        display: none;
+    }
+
+    .primary-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .row P {
+        padding-bottom: 0px;
+    }
+}
+
+/* Pantallas menores a 960px - Mostrar toggle móvil */
+@media only screen and (max-width: 960px) {
+    #mobile-menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 20px;
+    }
+}

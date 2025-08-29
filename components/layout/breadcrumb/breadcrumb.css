@@ -1,0 +1,57 @@
+/* =================================
+   BREADCRUMB NAVIGATION STYLES
+   ================================= */
+
+/* Contenedor principal del breadcrumb */
+.breadcrumb-wrapper {
+    padding: 0.75em 0; /* EDITAR: Espaciado vertical del breadcrumb */
+    background-color: #f6f6f6; /* EDITAR: Color de fondo del breadcrumb */
+}
+
+/* Contenedor interno con max-width */
+.main-container {
+    max-width: 1176px; /* EDITAR: Ancho máximo del contenido */
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px; /* EDITAR: Espaciado interno izquierdo */
+    padding-right: 8px; /* EDITAR: Espaciado interno derecho */
+}
+
+/* Lista del breadcrumb */
+.breadcrumb-list {
+    display: flex;
+    margin-right: 10px; /* EDITAR: Margen derecho de la lista */
+}
+
+/* Elementos individuales del breadcrumb */
+.breadcrumb-item {
+    font-weight: bold; /* EDITAR: Peso de la fuente */
+}
+
+/* Separador entre elementos del breadcrumb */
+.breadcrumb-separator {
+    display: inline-block;
+    padding: 0 5px; /* EDITAR: Espaciado alrededor del separador */
+    color: #bbbbba; /* EDITAR: Color del separador "/" */
+}
+
+/* =================================
+   ICONOS DEL BREADCRUMB
+   ================================= */
+
+/* Icono de casa (home) */
+.fa-house {
+    padding-left: 5px; /* EDITAR: Espaciado izquierdo del icono home */
+    color: #5d2b8c; /* EDITAR: Color del icono home */
+}
+
+/* Icono de barras (menú) */
+.fa-bars {
+    font-size: 20px; /* EDITAR: Tamaño del icono de menú */
+}
+
+/* Icono de flecha (caret) */
+.fa-caret-up {
+    transform: rotate(90deg); /* EDITAR: Rotación del icono */
+    color: #fdb924; /* EDITAR: Color del icono de flecha */
+}
