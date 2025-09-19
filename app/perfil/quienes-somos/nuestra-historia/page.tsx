@@ -1,143 +1,77 @@
 import Breadcrumb from "@/components/layout/breadcrumb/breadcrumb";
+import MainLayout from "@/components/layout/main/main";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
-export default function NuestraHistoriaPage() {
+
+export default function VisionValoresPage() {
+   // Configuración del índice de navegación
+  const navigationIndex = {
+    title: "Quiénes somos",
+    items: [
+      { 
+        href: "/perfil/quienes-somos/vision-valores", 
+        label: "Visión y Valores" 
+      },
+      { 
+        href: "/perfil/quienes-somos/nuestra-historia", 
+        label: "Nuestra Historia" 
+      }
+    ]
+  };
+
   return (
     <>
       {/* Navegación breadcrumb */}
-      <Breadcrumb
-        parentPages={["Perfil", "Quiénes Somos"]}
-        currentPage="Nuestra Historia"
+      <Breadcrumb 
+        parentPages={["Perfil", "Quiénes Somos"]} 
+        currentPage="Nuestra Historia" 
       />
-      {/* Sección principal del artículo */}
-      <section className="about-section">
-        <article>
-          <div className="about-container">
-            {/* Contenedor principal del texto */}
-            <div className="main-content">
-              {/* Contenido de texto principal */}
-              <div className="text-content">
-                <h1>Nuestra Historia</h1>
-                <p className="intro-text">
-                  PolarisX fue fundada con el objetivo de ofrecer servicios de
-                  construcción personalizados a una amplia gama de clientes,
-                  tanto al sector público como privado. Estamos constantemente
-                  comprometidos con la innovación y la excelencia en cada
-                  proyecto que emprendemos.
-                </p>
-                <p>
-                  Nos proponemos establecer un nuevo nivel en la gestión de
-                  proyectos y costos, utilizando tecnología avanzada y
-                  enfocándonos en las necesidades del cliente. Desde nuestros
-                  inicios, hemos trabajado intensamente para reunir un equipo de
-                  especialistas comprometidos y entusiastas que comparten
-                  nuestra visión de excelencia y dedicación.
-                </p>
-                <p>
-                  Desde su fundación, estamos decididos a hacer una diferencia
-                  significativa en la industria de la construcción. Nuestra meta
-                  es expandirnos y diversificarnos, ofreciendo soluciones
-                  innovadoras que no solo cumplan, sino que superen las
-                  expectativas de nuestros clientes. En PolarisX, cada proyecto
-                  es una oportunidad para demostrar nuestro compromiso con la
-                  excelencia y la innovación.
-                </p>
-              </div>
+      
+      {/* Sección principal usando MainLayout */}
+      <MainLayout
+        pageTitle="Nuestra Historia"
+        navigationIndex={navigationIndex}
+      >
+        {/* Contenido específico de la página */}
+        <p className="intro-text">
+          Colaboramos en proyectos destacados y nos asociamos con clientes de renombre, 
+          atrayendo a los mejores talentos. Para lograrlo, es fundamental tener una 
+          comprensión clara de nuestra identidad y de lo que representamos.
+        </p>
+        
+        <p>Los tres valores principales que defendemos son la base de nuestro éxito:</p>
+        
+        <h3>Nos comprometemos con nuestros clientes y colaboradores</h3>
+        <p>
+          Nuestros clientes confían en nuestra capacidad para gestionar y ejecutar un 
+          proyecto de calidad. Esto es posible porque confiamos plenamente en nuestros 
+          colaboradores. Cuando las personas están seguras de que sus equipos cumplirán 
+          con un alto estándar, pueden enfocarse mejor en sus propias responsabilidades. 
+          En resumen, cada miembro cumple su función de manera integral, creando un 
+          equipo sólido y confiable.
+        </p>
+        
+        <h3>Somos innovadores y eficaces</h3>
+        <p>
+          No hay una solución universal para todos los desafíos que enfrentan nuestros 
+          clientes. Nuestro servicio se fundamenta en la mezcla de experiencia y el 
+          dominio de métodos innovadores que hacen la diferencia en los proyectos. Con 
+          un enfoque empresarial y adaptable, estamos listos para explorar más allá de 
+          lo convencional y hallar la solución ideal. Al trabajar en proyectos destacados, 
+          podemos proporcionar a nuestros clientes soluciones que exceden sus expectativas.
+        </p>
+        
+        <h3>Fusionamos profesionalidad con distinción</h3>
+        <p>
+          La autenticidad es clave para el éxito de un proyecto. Es tentador usar jerga 
+          corporativa, pero es crucial recordar que interactuamos con personas. Ser 
+          genuinos implica también reconocer que se trabaja mejor en un entorno de apoyo. 
+          En PolarisX, integramos profesionalismo con personalidad de forma distintiva, 
+          promoviendo un ambiente laboral agradable y eficiente.
+        </p>
+      </MainLayout>
 
-              {/* Módulo de compartir en redes sociales */}
-              <div className="share-module">
-                <div className="share-title">
-                  <h2>Compartir</h2>
-                </div>
-                <div className="social-media-container">
-                  <ul className="social-media-list">
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/company/polarisx-cc/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/polarisx.construction"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-brands fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/polarisxc.construction/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Información lateral */}
-            <div className="sidebar-info">
-              {/* Contenedor de contacto */}
-              <div className="contact-profile-container">
-                <div className="contact-info-container">
-                  <ul className="contact-info-list">
-                    <li>
-                      <a href="#">
-                        <i className="fa-solid fa-envelope"></i>
-                        informes@polarisx-cc.com
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://chat.whatsapp.com/K3BBoRQ8LBlBPjZ4dC3nXU"
-                        style={{ color: "black" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-solid fa-phone"></i>
-                        +51 987 425 953
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Índice de navegación */}
-              <div className="navigation-index">
-                <div className="info-section-title">
-                  <h2>Quiénes somos</h2>
-                </div>
-                <div className="navigation-body">
-                  <ul>
-                    <li>
-                      <Link href="/perfil/quienes-somos/vision-valores">
-                        Visión y Valores
-                        <i className="fa-solid fa-chevron-right"></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/perfil/quienes-somos/nuestra-historia">
-                        Nuestra Historia
-                        <i className="fa-solid fa-chevron-right"></i>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
       {/* Sección Adicional - Portafolio de proyectos seleccionados */}
       <section id="featured-projects-section">
         <div className="featured-projects-container">
@@ -151,9 +85,8 @@ export default function NuestraHistoriaPage() {
                 <Image
                   src="/proyectos/proyecto-carretera-longitudinal-de-la-sierra-tramo-2.webp"
                   alt="Carretera longitudinal de la Sierra - tramo 2"
-                  width={400} // Especifica un ancho apropiado
-                  height={300} // Especifica una altura apropiada
-                  // layout="responsive" // Opcional: si necesitas diseño responsivo
+                  width={400}
+                  height={300}
                 />
               </a>
               <a href="/proyectos/carretera-longitudinal-de-la-sierra-tramo-2.html">
@@ -169,9 +102,9 @@ export default function NuestraHistoriaPage() {
                 <Image
                   src="/proyectos/proyecto-presa-sullana.webp"
                   alt="Presa Sullana"
-                  width={400} // Especificar ancho
-                  height={300} // Especificar altura
-                  layout="responsive" // Opcional para diseño responsivo
+                  width={400}
+                  height={300}
+                  layout="responsive"
                 />
               </a>
               <a href="/proyectos/presa-sullana.html">

@@ -9,7 +9,7 @@
 }
 
 /* Contenedor interno con max-width */
-.main-container {
+.main-container-breadcrumb {
     max-width: 1176px; /* EDITAR: Ancho máximo del contenido */
     margin-right: auto;
     margin-left: auto;

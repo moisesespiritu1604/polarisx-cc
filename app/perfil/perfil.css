@@ -121,3 +121,20 @@
   color: #41b3c1;
 }
 
+/* ===========================================
+   RESPONSIVE DESIGN - TABLETS
+   =========================================== */
+@media screen and (max-width: 1050px) {
+    /* Cambiar layout del perfil de empresa a una columna */
+    .profile-content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-testimonial-sidebar {
+        position: relative;
+        max-width: 100%;
+        margin-top: -150px;
+    }
+
+}
+

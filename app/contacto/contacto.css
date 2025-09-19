@@ -1,0 +1,253 @@
+/* ==========================================
+   ESTILOS PARA LA PÁGINA DE CONTACTO
+   ========================================== */
+
+/* Contenedor principal de la sección de contacto */
+.contact-section {
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* Contenedor principal con ancho responsivo */
+.contact-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título principal de la sección */
+.section-title-contacto {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Layout de dos columnas para desktop */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 2rem;
+}
+
+/* ==========================================
+   SECCIÓN DE INFORMACIÓN DE CONTACTO
+   ========================================== */
+
+/* Contenedor de la información de contacto */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Título de cada sección (contacto/formulario) */
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor de las tarjetas de contacto */
+.contact-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Estilo individual de cada tarjeta de contacto */
+.contact-card {
+  background: #f9f9f9;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de cada tarjeta */
+.card-title {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Datos de contacto (email/teléfono) */
+.card-data {
+  margin-bottom: 1.3rem;
+  color: #666;
+  font-size: 1.3rem;
+}
+
+/* Botón de contacto en las tarjetas */
+.contact-button {
+  display: inline-block;
+  color: #002C44;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #002C44;
+  background: transparent;
+}
+
+.contact-button:hover {
+  background-color: #002C44;
+  color: white;
+}
+
+/* ==========================================
+   SECCIÓN DEL FORMULARIO
+   ========================================== */
+
+/* Contenedor de la sección del formulario */
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Formulario principal */
+.contact-form {
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Campo individual del formulario */
+.form-field {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas del formulario */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+/* Inputs y textarea del formulario */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1.3rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #002C44;
+  box-shadow: 0 0 0 2px rgba(0, 44, 68, 0.1);
+}
+
+/* Campo específico para textarea */
+.textarea-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Botón de envío */
+.submit-button {
+  display: block;
+  width: 100%;
+  margin: 20px auto 0;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid #919191;
+  background: transparent;
+  color: #002C44;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #002C44;
+  color: white;
+  border-color: #002C44;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 44, 68, 0.3);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #999;
+  border-color: #ddd;
+}
+
+/* ==========================================
+   ESTILOS RESPONSIVOS
+   ========================================== */
+
+/* Tablet y dispositivos móviles */
+@media screen and (max-width: 768px) {
+  /* Cambiar a layout de una columna */
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  /* Ajustar padding en móviles */
+  .contact-section {
+    padding: 30px 0;
+  }
+  
+  /* Título más pequeño en móviles */
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Formulario ocupa todo el ancho disponible */
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  /* Tarjetas de contacto más anchas */
+  .contact-cards {
+    max-width: 100%;
+  }
+}
+
+/* Dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+  .contact-container {
+    width: 95%;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .contact-title {
+    font-size: 1.3rem;
+  }
+  
+  .contact-card {
+    padding: 15px;
+  }
+}

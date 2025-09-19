@@ -3,6 +3,8 @@ import Breadcrumb from "../../components/layout/breadcrumb/breadcrumb";
 import Image from "next/image";
 
 import "./perfil.css";
+import HeroBanner from "@/components/layout/hero/hero";
+import ProyectosSelectosPage from "@/components/layout/proyectos-selectos/proyectos-selectos";
 
 export default function PerfilPage() {
   return (
@@ -11,20 +13,17 @@ export default function PerfilPage() {
       <Breadcrumb currentPage="Perfil" />
 
       {/* Sección Hero */}
-      <section id="hero-section-perfil">
-        <div className="hero-container">
-          <div className="hero-content">
-            <h1>Perfil</h1>
-            <p className="hero-description">
-              Ayudamos a que empresarios e inversores consigan el mejor valor de
+      <HeroBanner
+              sectionId="hero-section-perfil"
+              backgroundImage="/perfil/fondo-perfil.webp"
+              title="Perfil"
+              description="Ayudamos a que empresarios e inversores consigan el mejor valor de
               sus recursos mediante asesoramiento sin conflictos de interés.
               Nuestra imparcialidad es clave para ayudar a que los clientes
               lleven a cabo sus proyectos dentro del presupuesto, en plazo y con
-              una calidad excepcional.
-            </p>
-          </div>
-        </div>
-      </section>
+              una calidad excepcional."
+            />
+
 
       {/* Sección Principal - Información de la empresa */}
       <section id="company-profile-section">
@@ -97,87 +96,7 @@ export default function PerfilPage() {
       </section>
 
       {/* Sección Adicional - Portafolio de proyectos seleccionados */}
-      <section id="featured-projects-section">
-        <div className="featured-projects-container">
-          <div className="section-header">
-            <h2>Una selección de proyectos</h2>
-          </div>
-
-          <div className="projects-grid">
-            <div className="project-card">
-              <a href="/proyectos/carretera-longitudinal-de-la-sierra-tramo-2.html">
-                <Image
-                  src="/proyectos/proyecto-carretera-longitudinal-de-la-sierra-tramo-2.webp"
-                  alt="Carretera longitudinal de la Sierra - tramo 2"
-                  width={400} // Especifica un ancho apropiado
-                  height={300} // Especifica una altura apropiada
-                  // layout="responsive" // Opcional: si necesitas diseño responsivo
-                />
-              </a>
-              <a href="/proyectos/carretera-longitudinal-de-la-sierra-tramo-2.html">
-                <div className="project-info-overlay">
-                  <h4>Carretera longitudinal de la Sierra - Tramo 2</h4>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div className="project-card">
-              <a href="/proyectos/presa-sullana.html">
-                <Image
-                  src="/proyectos/proyecto-presa-sullana.webp"
-                  alt="Presa Sullana"
-                  width={400} // Especificar ancho
-                  height={300} // Especificar altura
-                  layout="responsive" // Opcional para diseño responsivo
-                />
-              </a>
-              <a href="/proyectos/presa-sullana.html">
-                <div className="project-info-overlay">
-                  <h4>Presa Sullana</h4>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div className="project-card">
-              <a href="/proyectos/canal-miguel-checa.html">
-                <Image
-                  src="/proyectos/proyecto-canal-miguel-checa.webp"
-                  alt="Canal Miguel Checa"
-                  width={400}
-                  height={300}
-                  layout="responsive"
-                />
-              </a>
-              <a href="/proyectos/canal-miguel-checa.html">
-                <div className="project-info-overlay">
-                  <h4>Canal Miguel Checa</h4>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </div>
-              </a>
-            </div>
-
-            <div className="project-card">
-              <a href="/proyectos/corredor-ferroviario-este.html">
-                <Image
-                  src="/proyectos/proyecto-corredor-ferroviario-este.webp"
-                  alt="Corredor Ferroviario Este"
-                  width={400}
-                  height={300}
-                  layout="responsive"
-                />
-              </a>
-              <a href="/proyectos/corredor-ferroviario-este.html">
-                <div className="project-info-overlay">
-                  <h4>Corredor Ferroviario Este</h4>
-                  <i className="fa-solid fa-chevron-right"></i>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProyectosSelectosPage />
     </>
   );
 }

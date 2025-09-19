@@ -3,8 +3,8 @@
 import "./inicio.css";
 import Link from "next/link";
 import Image from "next/image";
-
 import { useEffect, useRef, useState } from "react";
+import HeroBanner from "@/components/layout/hero/hero";
 
 export default function HeroSection() {
   // Configuración de datos del carousel
@@ -74,19 +74,15 @@ export default function HeroSection() {
 
   return (
     <>
-      <section id="hero-section-inicio">
-        <div className="hero-container">
-          <div className="hero-content">
-            <h1>Somos PolarisX</h1>
-            <p className="hero-description">
-              PolarisX es una empresa independiente del sector construcción.
-              Nuestra visión es crear un negocio con alianzas estratégicas, que
-              atraiga a los mejores clientes, proyectos y personal en la
-              industria.
-            </p>
-          </div>
-        </div>
-      </section>
+      <HeroBanner
+        sectionId="hero-section-inicio"
+        backgroundImage="/inicio/fondo-inicio.webp"
+        title="Somos PolarisX"
+        description="PolarisX es una empresa independiente del sector construcción.
+            Nuestra visión es crear un negocio con alianzas estratégicas, que
+            atraiga a los mejores clientes, proyectos y personal en la
+            industria."
+      />
       <section id="blog-section">
         <div className="blog-container">
           <div>

@@ -1,0 +1,171 @@
+/* ================================================
+   HERO SECTION - Sección hero de sectores
+   ================================================ */
+
+#hero-section-sectores {
+    padding: 1em 0;
+    background-color: #eee;
+}
+
+.hero-container-sectores {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: grid;
+    gap: 10rem;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+.hero-content-sectores {
+    display: block;
+}
+
+.hero-content-sectores h1 {
+    font-size: 34px;
+    line-height: 1.1em;
+    color: #414042;
+    margin-block-start: 1.33em;
+}
+
+.hero-description-sectores {
+    margin: 1em 0;
+    font-size: 22px;
+    line-height: 1.33em;
+    color: #58595b;
+    display: block;
+}
+
+.hero-content-sectores p {
+    margin: 1em 0;
+    font-size: 18px;
+    line-height: 1.33em;
+    color: #58595b;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/* ================================================
+   INDUSTRIAL AREAS SHOWCASE - Sección principal de sectores industriales
+   ================================================ */
+
+.industrial-areas-showcase {
+    background-color: #eee;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.sectors-main-container {
+    max-width: 1176px;
+    margin-top: -50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ================================================
+   INDUSTRY SECTORS GRID - Grid de sectores industriales
+   ================================================ */
+
+.industry-sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 30px 0px;
+}
+
+/* ================================================
+   INDUSTRY SECTOR CARD - Tarjeta de sector industrial
+   ================================================ */
+
+.industry-sector-card {
+    display: block;
+}
+
+.sector-visual-wrapper {
+    max-width: 100%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ================================================
+   INDUSTRY SECTOR IMAGE - Imagen del sector industrial
+   ================================================ */
+
+.industry-sector-image {
+    width: 100%;
+    max-height: 200px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.industry-sector-image:hover {
+    transform: scale(1.2);
+}
+
+/* ================================================
+   SECTOR DETAILS OVERLAY - Superposición con detalles del sector
+   ================================================ */
+
+.sector-details-overlay {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    height: 45px;
+    bottom: 0;
+    transition: .5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sector-details-overlay i {
+    color: #f7c400; /* Color principal para iconos de sector */
+}
+
+.sector-visual-wrapper:hover .sector-details-overlay i {
+    color: white;
+}
+
+.sector-details-overlay:hover {
+    background-color: #f7c400; /* Color de hover para sectores */
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Diseño responsivo
+   ================================================ */
+
+/* Tablet - 768px y menos */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .industry-sectors-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 30px 0px;
+    }
+}
+
+/* Mobile - 400px y menos */
+@media screen and (max-width: 400px) {
+    .industry-sectors-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+

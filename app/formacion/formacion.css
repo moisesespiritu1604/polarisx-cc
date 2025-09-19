@@ -1,0 +1,207 @@
+/* ================================================
+   HERO SECTION - Formación
+   ================================================ */
+
+#formacion-hero-section {
+    padding: 1em 0;
+    background-color: #eee;
+}
+.formacion-section{
+    background-color: #eee;
+}
+.formacion-hero-container {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: grid;
+    gap: 10rem;
+    grid-template-columns: 1fr;
+    position: relative;
+    background-color: #eee;
+}
+
+.formacion-hero-content {
+    display: block;
+    background-color: #eee;
+}
+
+.formacion-hero-content h1 {
+    font-size: 34px;
+    line-height: 1.1em;
+    color: #414042;
+    margin-block-start: 1.33em;
+    background-color: #eee;
+}
+
+.formacion-hero-description {
+    margin: 1em 0;
+    font-size: 22px;
+    line-height: 1.33em;
+    color: #58595b;
+    display: block;
+    background-color: #eee;
+}
+
+.formacion-hero-content p {
+    margin: 1em 0;
+    font-size: 18px;
+    line-height: 1.33em;
+    color: #58595b;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    background-color: #eee;
+}
+
+/* ================================================
+   GRID DE CURSOS - Formación
+   ================================================ */
+
+.formacion-showcase {
+    background-color: #eee;
+    padding: 20px 0;
+    margin: auto;
+}
+
+.formacion-sectors-container {
+    max-width: 1176px;
+    margin-top: -50px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #eee;
+}
+
+/* Título de cada bloque */
+.formacion-section-title {
+    max-width: 1176px;
+    margin: 0px auto 20px auto;
+    padding: 0 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #555;
+    background-color: #eee;
+}
+
+/* Grid */
+.formacion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 30px 0px;
+    background-color: #eee;
+}
+
+/* Tarjeta */
+.formacion-card {
+    display: block;
+    background-color: #eee;
+}
+
+.formacion-card-wrapper {
+    max-width: 100%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.formacion-card-wrapper a {
+    text-decoration: none;
+    color: inherit;
+    background-color: #eee;
+}
+
+/* Imagen */
+.formacion-card-image {
+    width: 100%;
+    max-height: 200px;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    transition: .5s;
+    background-color: #eee;
+}
+
+.formacion-card-image:hover {
+    transform: scale(1.2);
+}
+
+/* Overlay */
+.formacion-card-overlay {
+    position: absolute;
+    left: 0px;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    height: 45px;
+    bottom: 0;
+    transition: .5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formacion-card-overlay h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.formacion-card-overlay i {
+    color: #f7c400;
+}
+
+.formacion-card-wrapper:hover .formacion-card-overlay {
+    background-color: #f7c400;
+    color: #000;
+}
+
+.formacion-card-wrapper:hover .formacion-card-overlay i {
+    color: #000;
+}
+
+/* Accesibilidad */
+.formacion-card-wrapper a:focus-visible {
+    outline: 2px dashed #f7c400;
+    outline-offset: 2px;
+}
+
+/* ================================================
+   RESPONSIVE
+   ================================================ */
+
+@media screen and (max-width: 768px) {
+    .formacion-hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .formacion-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 30px 0px;
+        background-color: #eee;
+    }
+
+    .formacion-section-title {
+        margin-top: 20px;
+        font-size: 18px;
+        background-color: #eee;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .formacion-grid {
+        grid-template-columns: repeat(1, 1fr);
+        background-color: #eee;
+    }
+}

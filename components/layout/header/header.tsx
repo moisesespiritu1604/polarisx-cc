@@ -264,8 +264,8 @@ export default function Header() {
                             </li>
                             <hr />
                             <li>
-                              <Link href="/sectores/sanidad">Salud</Link>
-                              <Link href="/sectores/sanidad"><i className="fa-solid fa-angle-down menu-arrow"></i></Link>
+                              <Link href="/sectores/salud">Salud</Link>
+                              <Link href="/sectores/salud"><i className="fa-solid fa-angle-down menu-arrow"></i></Link>
                             </li>
                             <hr />
                           </ul>

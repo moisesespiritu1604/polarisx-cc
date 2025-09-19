@@ -104,9 +104,9 @@ export default function Footer() {
           </div>
           <div className="legal-links-wrapper">
             <ul className="legal-links">
-              <li><Link href="/condiciones-de-uso">Condiciones de Uso</Link></li>
+              <li><Link href="/condiciones_de_uso">Condiciones de Uso</Link></li>
               <li>|</li>
-              <li><Link href="/politica-de-privacidad">Política de privacidad</Link></li>
+              <li><Link href="/politica_de_privacidad">Política de privacidad</Link></li>
             </ul>
           </div>
         </div>

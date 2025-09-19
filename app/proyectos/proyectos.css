@@ -1,0 +1,423 @@
+
+/* ====================================
+   1. CAROUSEL DE BLOG - CONTENEDOR PRINCIPAL
+   ==================================== */
+/* Contenedor principal del carousel */
+.blog-carousel-container {
+    max-width: 2800px;
+    max-height: 630px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* ====================================
+   WRAPPER Y SLIDES DEL CAROUSEL
+   ==================================== */
+/* Contenedor que envuelve todos los slides */
+.blog-carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease; /* Suavidad de transición entre slides */
+}
+
+/* Cada slide individual del carousel */
+.blog-carousel-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Imágenes de los slides */
+.blog-carousel-slide img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* Oscurecer imagen para mejor legibilidad del texto */
+}
+
+/* ====================================
+   BOTONES DE NAVEGACIÓN
+   ==================================== */
+/* Estilos base para botones anterior/siguiente */
+.blog-carousel-btn {
+    position: absolute;
+    bottom: 6%; /* Posición desde abajo */
+    width: 5%; /* Ancho relativo */
+    height: auto;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 0px;
+    cursor: pointer;
+    transform: scale(1.3); /* Tamaño inicial */
+    transition: transform 0.3s ease; /* Transición suave para hover */
+    background: none;
+    border: none;
+}
+
+/* Efecto hover para botones de navegación */
+.blog-carousel-btn:hover {
+    transform: scale(1.6); /* Aumentar tamaño en hover */
+}
+
+/* Posición específica del botón anterior */
+.blog-carousel-btn-prev {
+    left: 43%;
+}
+
+/* Posición específica del botón siguiente */
+.blog-carousel-btn-next {
+    right: 43%;
+}
+
+/* ====================================
+   CONTENIDO DE LOS SLIDES
+   ==================================== */
+/* Contenedor del contenido superpuesto en cada slide */
+.blog-slide-content {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo semi-transparente */
+    max-width: 1176px;
+    width: 75%;
+    position: relative;
+    bottom: 90%; /* Posicionamiento sobre la imagen */
+    left: 11%;
+    padding: 48px;
+    text-align: left;
+    color: var(--blanco); /* Variable de color blanco */
+}
+
+/* Título de cada entrada del blog */
+.blog-slide-info h2 {
+    width: 100%;
+    font-size: 48px;
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: var(--sexto) solid 4px; /* Variable de color para borde */
+}
+
+/* Contenedor de la información del slide */
+.blog-slide-info {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 2em;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: #a6a9ac solid 1px; /* Línea separadora */
+}
+
+/* Botón "Leer más" */
+.blog-slide-info a {
+    text-decoration: none;
+    color: #414042;
+    background-color: var(--sexto); /* Variable de color de fondo */
+    border-color: var(--sexto);
+    padding: 13px 20px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+/* ====================================
+   PAGINACIÓN (PUNTOS INDICADORES)
+   ==================================== */
+/* Contenedor de la paginación */
+.blog-carousel-pagination {
+    position: absolute;
+    bottom: 5.3%;
+    left: 50%;
+    transform: translateX(-50%); /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Puntos individuales de paginación */
+.blog-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 7px 5px;
+    cursor: pointer;
+    transition: opacity 0.3s; /* Transición suave para cambios */
+    border: none;
+    opacity: 0.7; /* Opacidad por defecto */
+}
+
+/* Punto activo de la paginación */
+.blog-pagination-bullet-active {
+    background-color: #f7c400; /* Color destacado para slide activo */
+    opacity: 1;
+}
+
+/* ====================================
+   RESPONSIVE - TABLETS Y MÓVILES
+   ==================================== */
+/* Ajustes para tablets y móviles */
+@media only screen and (max-width: 768px) {
+    /* Reducir tamaño del título en móviles */
+    .blog-slide-info h2 {
+        font-size: 24px;
+    }
+
+    /* Reducir altura del carousel en móviles */
+    .blog-carousel-container {
+        max-height: 450px; /* Altura reducida para móviles */
+        height: 450px;
+    }
+    
+    /* Reposicionar botones de navegación más cerca del centro */
+    .blog-carousel-btn-prev {
+        left: 25%; /* Más cerca del centro */
+    }
+    
+    .blog-carousel-btn-next {
+        right: 25%; /* Más cerca del centro */
+    }
+    
+    /* Ajustar paginación para estar centrada entre los botones */
+    .blog-carousel-pagination {
+        bottom: 8%; /* Subir un poco más para mejor visualización */
+    }
+    
+    /* Ajustar contenido del slide para móviles */
+    .blog-slide-content {
+        width: 90%;
+        left: 5%;
+        padding: 20px; /* Reducir padding en móviles */
+        bottom: 85%; /* Ajustar posición */
+    }
+    .blog-pagination-bullet {
+        margin: -7px 5px;
+    }
+}
+
+/* ====================================
+   RESPONSIVE - PANTALLAS MEDIANAS
+   ==================================== */
+/* Ajustes para pantallas hasta 1176px */
+@media only screen and (max-width: 1176px) {
+    /* Ajustar contenido para pantallas más pequeñas */
+    .blog-slide-content {
+        left: 10px;
+        width: 96%; /* Usar más ancho disponible */
+    }
+    
+    /* Ajustar contenedor de presentación general */
+    .contenedor-presentacion {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+/* ====================================
+   2. Portfolio Section
+   ==================================== */
+/* Portfolio Section */
+.portfolio-section {
+    max-width: 1176px;
+    padding: 50px 0;
+    margin: auto;
+}
+
+.portfolio-title {
+    margin-left: 1rem;
+    font-size: 1.125em;
+    line-height: 1.33em;
+    color: #58595b;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 30px 0px;
+}
+
+.project-card {
+    max-width: 450px;
+    border: 1px solid var(--tercero);
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-link,
+.project-info-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.2);
+}
+
+.project-info {
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--blanco);
+    width: 100%;
+    padding: 10px;
+    height: 45px;
+    bottom: 0;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-name {
+    margin: 0;
+}
+
+.project-arrow {
+    color: var(--sexto);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+    color: white;
+}
+
+.project-info:hover {
+    background-color: var(--sexto);
+}
+
+/* Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination-numbers {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.pagination-link {
+    text-decoration: none;
+    color: #5d2b8c;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-right: 15px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.pagination-link:hover {
+    color: var(--tercero);
+}
+
+.pagination-active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    font-size: 2rem;
+    color: #b8b8b8;
+    text-decoration-color: #5d2b8c;
+}
+
+.pagination-btn {
+    background-color: #5d2b8c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-prev i {
+    transform: rotate(270deg);
+}
+
+.pagination-next i {
+    transform: rotate(90deg);
+}
+
+.pagination-disabled {
+    opacity: 0.75;
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .pagination-numbers {
+        margin-left: 10px;
+    }
+    
+    .pagination-controls {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 30px 15px;
+    }
+    
+    .project-card {
+        margin: 10px auto;
+    }
+    
+    .pagination-numbers {
+        margin-left: 15px;
+    }
+    
+    .pagination-controls {
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .pagination-numbers {
+        margin-left: 25px;
+    }
+    
+    .pagination-controls {
+        margin-right: 25px;
+    }
+}

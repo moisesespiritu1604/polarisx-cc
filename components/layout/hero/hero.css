@@ -1,0 +1,114 @@
+/* ========================================
+   HERO SECTION ESTANDARIZADO
+   ======================================== */
+
+/* Contenedor principal del hero */
+[id^="hero-section"] {
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Contenedor del contenido con ancho máximo */
+.hero-container {
+  width: 100%;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+/* Caja de contenido principal */
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  color: var(--blanco);
+  text-align: left;
+  margin: 5% 0; /* Margen superior sin centrado horizontal */
+}
+
+/* Título principal */
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: solid 4px;
+  font-weight: bold;
+}
+
+/* Descripción del hero */
+.hero-description {
+  color: var(--blanco);
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Pantallas hasta 1176px */
+@media only screen and (max-width: 1176px) {
+  .hero-container {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+
+/* Pantallas hasta 1050px - Centrado del contenido */
+@media only screen and (max-width: 1050px) {
+  .hero-content {
+    margin: 5% auto; /* Centrado cuando la pantalla es menor a 1050px */
+  }
+}
+
+/* Tablets - 768px */
+@media only screen and (max-width: 768px) {
+  [id^="hero-section"] {
+    min-height: 60vh;
+  }
+  
+  .hero-content {
+    padding: 15px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+/* Móviles - 480px */
+@media only screen and (max-width: 480px) {
+  [id^="hero-section"] {
+    min-height: 70vh;
+  }
+  
+  .hero-container {
+    padding: 0 12px;
+  }
+  
+  .hero-content {
+    padding: 12px;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+  }
+}

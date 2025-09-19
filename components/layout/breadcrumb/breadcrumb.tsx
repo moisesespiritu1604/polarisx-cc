@@ -16,7 +16,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
 }) => {
   return (
     <div className="breadcrumb-wrapper">
-      <div className="main-container">
+      <div className="main-container-breadcrumb">
         <nav className="breadcrumb-navigation">
           <ul className="breadcrumb-list">
             <li className="breadcrumb-item">

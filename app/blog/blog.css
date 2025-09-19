@@ -1,0 +1,406 @@
+/* ========================================
+   2. SECCIÓN DE BLOG - CONFIGURACIÓN PRINCIPAL
+   ======================================== */
+
+/* Contenedor principal del blog */
+#blog-section {
+    padding: 40px 0;
+    margin: auto;
+    background-color: #f3f3f3;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor con ancho máximo y centrado */
+.blog-container {
+    max-width: 1176px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 8px;
+    padding-right: 8px;   
+    margin-top: 0px;
+}
+
+/* Espaciado inferior del contenido del blog */
+.blog-content {
+    margin-bottom: 70px;
+}
+
+/* ========================================
+   HEADER DE LA SECCIÓN BLOG - TÍTULO Y NAVEGACIÓN
+   ======================================== */
+
+/* Contenedor del título principal del blog */
+.blog-section-header {
+    width: 100%;
+    position: relative;
+    margin-top: 2em;
+    padding-bottom: 1.5rem;
+    margin-bottom: 32px;
+    border-bottom: var(--sexto) solid 4px;
+}
+
+/* Contenido del header del blog con título y enlace */
+.blog-header-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* Título principal de la sección blog */
+.blog-section-title {
+    color: #414042;
+    font-size: 48px;
+    margin: 0;
+    display: inline-block;
+}
+
+/* Enlace "Ir a Blog" */
+.blog-header-content a {
+    position: relative;
+    display: inline-block;
+    background: 0 0;
+    padding-right: 16px;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #5d2b8c;
+    font-weight: 700;
+}
+
+.blog-header-content a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   ICONOS Y ELEMENTOS GRÁFICOS
+   ======================================== */
+
+/* Icono de flecha (rotado 90 grados) */
+.fa-caret-up {
+    transform: rotate(90deg);
+    color: #fdb924;
+}
+
+/* ========================================
+   GRID PRINCIPAL PARA DESKTOP - LAYOUT EN DOS COLUMNAS
+   ======================================== */
+
+/* Grid principal para desktop (post destacado + sidebar) */
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    width: 100%; 
+    align-items: start;
+}
+
+/* Post destacado principal */
+.featured-post {
+    width: 100%;
+}
+
+/* Posts del sidebar */
+.sidebar-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre posts del sidebar */
+}
+
+/* ========================================
+   ESTILOS DE POSTS - VERSIÓN OVERLAY (DESKTOP)
+   ======================================== */
+
+/* Contenedor individual del post */
+.blog-post {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Post destacado - altura calculada para igualar sidebar */
+.featured-post .blog-post {
+    width: 100%;
+    height: 580px; /* Altura calculada: (180px * 3) + (20px * 2) = 580px */
+}
+
+/* Posts del sidebar - altura fija */
+.sidebar-posts .blog-post {
+    width: 100%;
+    height: 180px;
+}
+
+/* Imágenes de los posts - se adaptan al contenedor */
+.blog-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene proporción sin deformar */
+    transition: transform .3s ease, filter .3s ease;
+    display: block;
+}
+
+/* Efecto hover en imágenes */
+.blog-post img:hover {
+    transform: scale(1.05); /* Efecto más sutil */
+}
+
+/* Información superpuesta en los posts */
+.post-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 20px 15px 15px;
+    z-index: 10;
+    transition: all .3s ease;
+}
+
+.post-info span {
+    color: #41b3c1;
+}
+
+/* Tipografía en post destacado */
+.featured-post .post-info p {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    opacity: 0.9;
+}
+
+.featured-post .post-info h4 {
+    font-size: 16px; 
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+/* Tipografía en sidebar posts */
+.sidebar-posts .post-info p {
+    font-size: 11px;
+    margin: 0 0 3px 0;
+    opacity: 0.9;
+}
+
+.sidebar-posts .post-info h4 {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+/* ========================================
+   GRID DE TARJETAS - VERSIÓN MÓVIL/TABLET
+   ======================================== */
+
+/* Contenedor del grid de tarjetas */
+.cards-grid {
+    margin-top: 20px;
+}
+
+/* Grid de 3 columnas para las tarjetas con espaciado fijo */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio fijo entre tarjetas */
+}
+
+/* Tarjeta individual del blog */
+.blog-card {
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    margin: 0; /* Eliminar margen automático */
+    height: 380px; /* Altura fija para todas las tarjetas */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card a {
+    text-decoration: none;
+}
+
+/* Contenedor de imagen en tarjetas - altura fija */
+.blog-card > div:first-child {
+    height: 200px; /* Altura fija para el área de imagen */
+    overflow: hidden;
+}
+
+/* Imágenes en las tarjetas */
+.blog-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Se adapta sin deformarse */
+    transition: transform .3s ease, filter .3s ease;
+    display: block;
+}
+
+.blog-card img:hover {
+    transform: scale(1.05); /* Efecto hover más sutil */
+}
+
+/* ========================================
+   INFORMACIÓN DE TARJETAS - CONTENIDO INTERNO
+   ======================================== */
+
+/* Contenedor de información en tarjetas */
+.card-info {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between; /* Distribuye el contenido */
+}
+
+/* Títulos en tarjetas */
+.card-info h4 {
+    color: #414042;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.card-info span {
+    color: #41b3c1;
+}
+
+/* Fecha de publicación */
+.card-date {
+    background-color: #ececec; 
+    padding: 5px 10px; 
+    display: inline-block; 
+    font-size: 14px;
+    color: #666; 
+    border-radius: 4px; 
+    margin-bottom: 10px; 
+}
+
+/* ========================================
+   ENLACES "LEER MÁS" - ACCIONES
+   ======================================== */
+
+/* Enlace "Leer más" */
+.read-more a {
+    margin-top: 10px;
+    display: flex;
+    align-content: center;
+}
+
+.read-more a p {
+    color: #5d2b8c;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.read-more i {
+    color: var(--sexto);
+    transform: rotate(90deg);
+    margin-left: 5px;
+}
+
+/* ========================================
+   CLASES DE VISIBILIDAD - RESPONSIVE
+   ======================================== */
+
+/* Oculto por defecto en móvil/tablet */
+.mobile-tablet-only {
+    display: none;
+}
+
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ======================================== */
+
+/* TABLET - Máximo 1100px */
+@media only screen and (max-width: 1100px) {
+    
+    /* Mostrar versión móvil/tablet */
+    .mobile-tablet-only {
+        display: block;
+    }
+    
+    /* Cambiar grid de tarjetas a 2 columnas */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* Reducir espacio en tablet */
+    }
+    
+    /* Ajustar altura de tarjetas en tablet */
+    .blog-card {
+        height: 350px;
+    }
+    
+    .blog-card > div:first-child {
+        height: 180px;
+    }
+    
+    /* Ocultar versión desktop */
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* MÓVIL - Máximo 768px */
+@media only screen and (max-width: 768px) {
+    
+    /* Grid principal a una sola columna */
+    .main-grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajustar dimensiones para móvil */
+    .featured-post .blog-post {
+        height: 250px; /* Altura reducida en móvil */
+    }
+    
+    .sidebar-posts .blog-post {
+        height: 150px; /* Altura reducida en móvil */
+    }
+    
+    /* Ajustes tipográficos para móvil */
+    .sidebar-posts .post-info h4 {
+        font-size: 12px;   
+    }
+    
+    /* Eliminar margen en post destacado */
+    .featured-post {
+        margin-right: 0;
+    }
+    
+    /* Espaciado en sidebar posts */
+    .sidebar-posts {
+        margin: 15px 0;
+    }
+    
+    /* Header flexible en móvil */
+    .blog-header-content {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    
+    .blog-section-header h2 {
+        margin-bottom: 10px;
+    }
+    
+    /* Grid de tarjetas a una sola columna */
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    /* Ocultar versión desktop */
+    .desktop-only {
+        display: none;
+    }
+}

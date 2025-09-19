@@ -1,0 +1,88 @@
+:root {
+  --page-max: 1120px;
+  --measure: 70ch;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #0ea5e9;
+  --border: #e5e7eb;
+}
+
+#cond-outer {
+  padding: 50px 15px;
+  color: var(--secundario);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 71.25px;
+}
+
+.cond-article {
+  max-width: 1176px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.cond-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+.cond-eyebrow {
+  color: var(--muted);
+  font-size: 1.5rem;
+  margin: 0 0 0.25rem;
+}
+.cond-article h1 {
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+.cond-lead {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Secciones y párrafos */
+.cond-section {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+.cond-section h2 {
+  margin: 1rem 0 0.5rem;
+}
+.cond-section p {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.9;
+  text-align: justify;
+  font-weight: 500;
+}
+
+/* Listas */
+.cond-list {
+  margin: 0.75rem 0 1rem 0;
+  padding-left: 1.25rem;
+}
+.cond-list li {
+  margin: 0.4rem 0;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+/* Enlaces */
+.cond-link {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+.cond-link:hover {
+  opacity: 0.85;
+}
+
+/* Meta */
+.cond-updated {
+  color: var(--muted);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}

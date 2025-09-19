@@ -1,0 +1,540 @@
+/* ======================
+   SECCIÓN PRINCIPAL ESTANDARIZADA
+   ====================== */
+.main-section {
+  padding: 1em 0;
+  margin-bottom: 40px;
+}
+
+.main-section article {
+  margin-top: -20px;
+}
+
+/* ======================
+   CONTENEDOR PRINCIPAL
+   ====================== */
+.main-container {
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 0 12px;
+  display: grid;
+  gap: 6rem;
+  grid-template-columns: 3fr 1fr;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ======================
+   WRAPPER DEL CONTENIDO
+   ====================== */
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  grid-column: 1 / 2;
+}
+
+/* ======================
+   CONTENIDO DE TEXTO
+   ====================== */
+.text-content {
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.text-content h1 {
+  font-size: clamp(24px, 5vw, 34px);
+  line-height: 1.1em;
+  color: #414042;
+  margin: 1.33em 0 1em 0;
+}
+
+.text-content h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  line-height: 1.1em;
+  color: #414042;
+  margin: 1.2em 0 0.8em 0;
+  font-weight: 700;
+}
+
+.text-content h3 {
+  margin-bottom: 0.625em;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 0.5em;
+  line-height: 1.1em;
+  color: #414042;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.text-content p {
+  margin: 1em 0;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #58595b;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* ======================
+   MÓDULO DE COMPARTIR
+   ====================== */
+.share-module {
+  grid-column: 1 / 2;
+  grid-row: 1;
+  padding: 0.75em 0;
+  border-top: 1px solid #d1d3d4;
+  margin-top: 45px;
+  align-self: start;
+}
+
+.share-title {
+  font-size: 0.875em;
+  font-weight: 700;
+  color: #414042;
+  margin-block-start: -1em;
+  margin-block-end: -1.5em;
+}
+
+/* ======================
+   REDES SOCIALES
+   ====================== */
+.social-media-list {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.social-media-list li {
+  font-style: normal;
+  font-weight: 400;
+  background: 0 0;
+  margin-right: 0.5em;
+  padding: 10px 0;
+}
+
+.social-media-list li a {
+  text-decoration: none;
+}
+
+.social-media-list li i {
+  background-color: #f7c400;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-list li i:hover {
+  background-color: #5d2b8c;
+}
+
+/* ======================
+   INFORMACIÓN LATERAL
+   ====================== */
+.sidebar-info {
+  position: relative;
+  max-width: 270px;
+  width: 100%;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ======================
+   INFORMACIÓN DE CONTACTO
+   ====================== */
+.contact-section {
+  order: 1;
+}
+
+.contact-info-list {
+  margin: 0.75em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-info-list li {
+  font-size: 1.125em;
+  line-height: 1.33em;
+  color: #58595b;
+  margin: 0.875em 0;
+  font-weight: 700;
+}
+
+.contact-info-list li a {
+  text-decoration: none;
+  color: #008fc9;
+  transition: color 0.3s ease;
+}
+
+.contact-info-list li a:hover {
+  color: #5d2b8c;
+}
+
+.contact-info-list li i {
+  margin-right: 8px;
+}
+
+/* ======================
+   CITA DESTACADA (TESTIMONIOS/FRASES)
+   ====================== */
+.highlight-quote-sidebar {
+  order: 2;
+  position: relative;
+  width: 100%;
+}
+
+.highlight-quote-sidebar blockquote {
+  margin: 0;
+  padding: 1.25em 0.875em 1em;
+  font-size: clamp(18px, 3vw, 23px);
+  line-height: 1.27em;
+  color: #41b3c1;
+  background-color: #ecf7f9;
+  border-top: 3px solid #41b3c1;
+  text-align: left;
+  quotes: none;
+}
+
+.highlight-quote-sidebar .fa-quote-left {
+  font-size: clamp(30px, 5vw, 40px);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+  padding-right: 0.25em;
+}
+
+.highlight-quote-sidebar .fa-quote-right {
+  font-size: 10px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 1em;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #41b3c1;
+  text-align: right;
+}
+
+/* ======================
+   ÍNDICE DE NAVEGACIÓN
+   ====================== */
+.navigation-index {
+  order: 3;
+  width: 100%;
+}
+
+.navigation-title {
+  margin-bottom: 1em;
+}
+
+.navigation-title h2 {
+  margin: 0;
+  font-size: 1.375em;
+  font-weight: 700;
+  color: #414042;
+}
+
+.navigation-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-body ul li:first-child {
+  border-top: 1px solid #eee;
+}
+
+.navigation-body li {
+  font-size: 1em;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-body li:hover {
+  background-color: rgba(93, 43, 140, 0.1);
+}
+
+.navigation-body li a {
+  text-decoration: none;
+  padding: 0.7em 1.75em 0.7em 0.75em;
+  position: relative;
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  color: #5d2b8c;
+  transition: color 0.3s ease;
+}
+
+.navigation-body li a:hover {
+  color: #414042;
+}
+
+.navigation-body li a i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f7c400;
+  font-size: 0.8em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-body li:hover i {
+  color: #414042;
+  transform: translateY(-50%) translateX(3px);
+}
+
+/* ======================
+   AJUSTES PARA DIFERENTES COMBINACIONES
+   ====================== */
+
+/* Solo contacto */
+.sidebar-info:has(.contact-section):not(:has(.highlight-quote-sidebar)):not(
+    :has(.navigation-index)
+  ) {
+  gap: 0;
+}
+
+/* Contacto + Cita */
+.sidebar-info:has(.contact-section):has(.highlight-quote-sidebar):not(
+    :has(.navigation-index)
+  ) {
+  gap: 1.5rem;
+}
+
+/* Contacto + Navegación */
+.sidebar-info:has(.contact-section):not(:has(.highlight-quote-sidebar)):has(
+    .navigation-index
+  ) {
+  gap: 1.5rem;
+}
+
+/* Contacto + Cita + Navegación */
+.sidebar-info:has(.contact-section):has(.highlight-quote-sidebar):has(
+    .navigation-index
+  ) {
+  gap: 1.2rem;
+}
+
+/* Ajuste para cuando hay múltiples elementos */
+.sidebar-info:has(.highlight-quote-sidebar):has(.navigation-index)
+  .highlight-quote-sidebar
+  blockquote {
+  padding: 1em 0.75em 0.875em;
+  font-size: clamp(16px, 2.8vw, 20px);
+}
+
+/* ======================
+   ESTADOS ALTERNATIVOS / TEMAS
+   ====================== */
+
+/* Variación de color para diferentes contextos */
+.highlight-quote-sidebar.secondary-theme blockquote {
+  color: #5d2b8c;
+  background-color: #f5f1f9;
+  border-top-color: #5d2b8c;
+}
+
+.highlight-quote-sidebar.secondary-theme .fa-quote-left,
+.highlight-quote-sidebar.secondary-theme .quote-author {
+  color: #5d2b8c;
+}
+
+/* Navegación con tema alternativo */
+.navigation-index.secondary-theme .navigation-body li a {
+  color: #008fc9;
+}
+
+.navigation-index.secondary-theme .navigation-body li:hover {
+  background-color: rgba(0, 143, 201, 0.1);
+}
+
+.navigation-index.secondary-theme .navigation-body li a i {
+  color: #008fc9;
+}
+
+/* ======================
+   RESPONSIVE DESIGN MEJORADO
+   ====================== */
+
+/* Tablets grandes (1200px y menos) */
+@media screen and (max-width: 1200px) {
+  .main-container {
+    gap: 4rem;
+  }
+
+  .content-wrapper {
+    display: block;
+  }
+
+  .share-module {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    margin-top: 30px;
+    padding: 1em 0;
+  }
+
+  .share-title {
+    margin: 0;
+  }
+
+  .social-media-container {
+    margin-bottom: 0;
+  }
+
+  .sidebar-info {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets medianas (940px y menos) */
+@media screen and (max-width: 940px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content-wrapper {
+    display: block;
+  }
+
+  .sidebar-info {
+    max-width: 100%;
+    margin-top: 10px;
+    gap: 1.8rem;
+  }
+
+  .share-module {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #d1d3d4;
+    border-bottom: 1px solid #d1d3d4;
+    margin-top: 25px;
+  }
+
+  /* Reorganizar orden en tablet */
+  .contact-section {
+    order: 1;
+  }
+}
+
+/* ======================
+   CONSULTORÍAS (scoped en MainLayout)
+   ====================== */
+.text-content .consultorias .contenido-texto {
+  /* Esta regla no es necesaria porque ya estamos dentro de .text-content,
+     pero la dejo aquí comentada por si reutilizas el bloque en otro contexto */
+  /* margin-top: 20px; width: 100%; display: block; */
+}
+
+.text-content .consultorias .contenedor-consultorias {
+  margin-bottom: 1.25em;
+  background-color: #f6f6f6;
+  border-top: 3px solid var(--sexto);
+  padding: 1.2em 2.2em 2.2em;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.text-content .consultorias .titulo-consultoria {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  line-height: 1.33em;
+  margin-top: 0.75em;
+  position: relative;
+  padding-left: 0;
+  font-weight: 700;
+  color: #58595b;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.text-content .consultorias p {
+  margin: 1em 0;
+  font-size: 14px !important;
+  line-height: 1.33em;
+  color: #58595b;
+  display: block;
+}
+
+.text-content .consultorias .leer-mas {
+  padding-left: 0;
+  font-size: 1em;
+  margin: 0.25em 0 0.5em;
+  position: relative;
+  color: #5d2b8c;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.text-content .consultorias .leer-mas i {
+  color: var(--sexto);
+}
+.text-content ul {
+  list-style: circle;
+  color: black !important;
+}
+.text-content ul li {
+  margin: 1em 0;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #58595b;
+  margin-left: 40px;
+}
+/* Contenedor de imágenes */
+.text-content  .contenedor-imagenes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Estilos para imágenes */
+.text-content .imagen-documento {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.98) contrast(1.05) saturate(1.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+/* Efecto al pasar el mouse */
+.text-content .imagen-documento:hover {
+    transform: scale(1.01);
+    filter: brightness(1.02) contrast(1.08) saturate(1.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.text-content  .pie-imagen {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280; /* gris */
+  margin-top: .5rem;
+}
